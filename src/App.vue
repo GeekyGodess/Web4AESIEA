@@ -5,7 +5,7 @@
       <v-toolbar-title class="headline text-uppercase">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <span>Harry Potter</span>
-        <span class="font-weight-light">Shops</span>
+        <span class="font-weight-light">Shop</span>
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-btn icon>
@@ -32,7 +32,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Catégorie</v-list-item-title>
+            <v-list-item-title>Catégories</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -42,7 +42,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Article du moment</v-list-item-title>
+            <v-list-item-title>Articles du moment</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -52,7 +52,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Nouveauté</v-list-item-title>
+            <v-list-item-title>Nouveautés</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -62,7 +62,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Coup de coeur</v-list-item-title>
+            <v-list-item-title>Coupw de coeur</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>

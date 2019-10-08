@@ -14,7 +14,7 @@
           <FONT face="Impact">Welcome to Harry Potter shop</FONT>
         </h1>
         <p class="subheading font-weight-regular" style="background-color:#FFFFFF;">
-          Connecter vous pour acceder au shop
+          Connecter vous pour accéder au shop
           <v-container fluid align-center>
             <v-row justify="center">
               <v-col cols="12" sm="6" md="4">
