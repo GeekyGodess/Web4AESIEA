@@ -1,36 +1,92 @@
+<!-- composant principal -->
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+    <v-app-bar id="test" dark app>
+
+      <v-toolbar-title  class="headline text-uppercase">
+        <span class="font-weight-light">Au Chaudron Magique </span>
+      
+    <!-- Réussir à mettre l'image de façon jolie dans la barre -->
+        
+       
       </v-toolbar-title>
+
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+      <span> Votre compte 
+        <v-avatar color="red" size="60">
+        <span class="white--text headline">62</span>
+      </v-avatar>
+      </span>
     </v-app-bar>
 
+    <v-navigation-drawer permanent>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="title">
+              Application
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              subtext
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+  
+        <v-divider></v-divider>
+  
+        <v-list
+          dense
+          nav
+        >
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            link
+          >
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
+  
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+
+
     <v-content>
-      <HelloWorld/>
+      <Accueil/>
     </v-content>
   </v-app>
 </template>
 
+
+<!-- Pour le code JS -->
 <script>
-import HelloWorld from './components/HelloWorld';
+import Accueil from './components/Accueil';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Accueil,
   },
-  data: () => ({
-    //
-  }),
+  data(){
+    return {
+      items: [
+        { title: 'Chaudrons', icon: 'mdi-expansion-card' },
+        { title: 'Baguettes', icon: 'mdi-auto-fix' },
+        { title: 'Qui sommes nous?', icon: 'mdi-help-box' },
+      ],
+      right: null,
+    }
+  },
 };
+
+
 </script>
+
+<style scoped>
+  #test{
+    background-color: rebeccapurple;
+  }
+</style>
