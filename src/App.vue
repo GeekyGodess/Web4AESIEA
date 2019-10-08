@@ -1,3 +1,4 @@
+<!-- composant principal -->
 <template>
   <v-app>
     <v-app-bar app>
@@ -67,25 +68,26 @@
       </v-list>
     </v-navigation-drawer>
     <v-content>
-      <!--<Connexion/>-->
-      <Accueil/>
+      <Connexion/>
+      <!--<Accueil/>-->
     </v-content>
   </v-app>
 </template>
 
+
+<!-- Pour le code JS -->
 <script>
-//import Connexion from './components/Connexion';
-import Accueil from './components/Accueil';
+import Connexion from './components/Connexion';
+//import Accueil from './components/Accueil';
 
 export default {
   name: 'App',
   components: {
-    /*Connexion,*/ Accueil,
+    Connexion, /*Accueil,*/
   },
   data: () => ({
     //
     drawer: true
   }),
 };
-
 </script>
