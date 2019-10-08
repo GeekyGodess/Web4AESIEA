@@ -62,14 +62,14 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Coupw de coeur</v-list-item-title>
+            <v-list-item-title>Coups de coeur</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-content>
-      <Connexion/>
-      <!--<Accueil/>-->
+      <!--<Connexion/>-->
+      <Accueil/>
     </v-content>
   </v-app>
 </template>
@@ -77,13 +77,14 @@
 
 <!-- Pour le code JS -->
 <script>
-import Connexion from './components/Connexion';
-//import Accueil from './components/Accueil';
+//import Connexion from './components/Connexion';
+import Accueil from './components/Accueil';
 
 export default {
   name: 'App',
   components: {
-    Connexion, /*Accueil,*/
+    /*Connexion,*/ 
+    Accueil,
   },
   data: () => ({
     //

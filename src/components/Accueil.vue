@@ -10,7 +10,7 @@
             </v-flex>
             <v-flex xs12>
                 <h1 align="left">
-                    <FONT face="impact">Article du moment</FONT>
+                    <FONT face="impact">Articles du moment</FONT>
                 </h1>
                 <v-simple-table>
                     <template v-slot:default>
@@ -28,6 +28,9 @@
                                         Coeur: Ventricule de Dragon<br/>
                                         Longeur: 27,30 centimètres<br/>
                                         <b>prix: 40€</b>
+                                        <div>
+                                         <v-btn rounded color="primary" dark>Ajouter au panier</v-btn>
+                                        </div>
                                     </p>
                                 </td>
                             </tr>
@@ -45,6 +48,9 @@
                                         Longeur: 27,50 centimètres
                                         très souple<br/>
                                         <b>prix: 40€</b>
+                                        <div>
+                                         <v-btn rounded color="primary" dark>Ajouter au panier</v-btn>
+                                        </div>
                                     </p>
                                 </td>
                             </tr>
@@ -61,10 +67,19 @@
                                         Coeur: Crin de licorne<br/>
                                         Longeur: 35 centimètres<br/>
                                         <b>prix: 40€</b>
+                                        <div>
+                                         <v-btn rounded color="primary" dark>Ajouter au panier</v-btn>
+                                        </div>
                                     </p>
                                 </td>
                             </tr>
                         </tbody>
+                         <v-footer absolute>
+      <div class="flex-grow-1"></div>
+      <span lass="text-center"> Suivez-nous sur les réseaux sociaux </span>
+      <div>&copy; {{ new Date().getFullYear() }}</div>
+      
+    </v-footer>
                      </template>
                 </v-simple-table>
             </v-flex>
