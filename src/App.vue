@@ -2,11 +2,14 @@
 <template>
   <v-app>
     <v-app-bar app>
+
       <v-toolbar-title class="headline text-uppercase">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <span>Harry Potter</span>
         <span class="font-weight-light">Shop</span>
       </v-toolbar-title>
+
+
       <div class="flex-grow-1"></div>
       <v-btn icon>
         <img src="./assets/iconPannier.png" style="float:right" height="20%" width="20%">
@@ -15,26 +18,43 @@
         <img src="./assets/iconUser.png" style="float:right" height="20%" width="20%">
       </v-btn>
     </v-app-bar>
-    <v-navigation-drawer app v-model="drawer">
+
+    <v-navigation-drawer app temporary v-model="drawer">
       <v-list>
-        <v-list-item>
-          <v-list-item-icon>
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Menu</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+
         <v-list-item>
           <v-list-item-icon>
             <v-btn icon>
-              <v-icon> mdi-database</v-icon>
+              <v-icon> mdi-hanger</v-icon>
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Catégories</v-list-item-title>
+            <v-list-item-title>Vêtements</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-item>
+          <v-list-item-icon>
+            <v-btn icon>
+              <v-icon> mdi-auto-fix</v-icon>
+            </v-btn>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Baguettes</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item>
+          <v-list-item-icon>
+            <v-btn icon>
+              <v-icon> mdi-watch</v-icon>
+            </v-btn>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Bijoux</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
         <v-list-item>
           <v-list-item-icon>
             <v-btn icon>
@@ -70,6 +90,34 @@
     <v-content>
       <!--<Connexion/>-->
       <Accueil/>
+      <v-footer
+        v-bind="localAttrs"
+        :padless="padless"
+      >
+        <v-card
+          flat
+          tile
+          width="100%"
+          class="grey lighten-1 text-center"
+        >
+          <v-card-text>
+            <v-btn
+              v-for="icon in icons"
+              :key="icon"
+              class="mx-4"
+              icon
+            >
+              <v-icon size="24px">{{ icon }}</v-icon>
+            </v-btn>
+          </v-card-text>
+  
+          <v-divider></v-divider>
+  
+          <v-card-text class="white--text">
+            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          </v-card-text>
+        </v-card>
+      </v-footer>
     </v-content>
   </v-app>
 </template>
@@ -88,7 +136,13 @@ export default {
   },
   data: () => ({
     //
-    drawer: true
+    drawer: null,
+     icons: [
+      'mdi-home',
+      'mdi-email',
+      'mdi-facebook-box',
+      'mdi-twitter',
+    ],
   }),
 };
 </script>

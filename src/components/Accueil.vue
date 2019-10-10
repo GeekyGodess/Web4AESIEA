@@ -74,12 +74,7 @@
                                 </td>
                             </tr>
                         </tbody>
-                         <v-footer absolute>
-      <div class="flex-grow-1"></div>
-      <span lass="text-center"> Suivez-nous sur les réseaux sociaux </span>
-      <div>&copy; {{ new Date().getFullYear() }}</div>
-      
-    </v-footer>
+                         
                      </template>
                 </v-simple-table>
             </v-flex>
