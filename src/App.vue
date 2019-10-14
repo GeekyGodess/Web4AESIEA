@@ -11,11 +11,13 @@
 
 <script>
 import AppNavigation from '@/components/AppNavigation';
+import Accueil from '@/components/Accueil.vue'
 
 export default {
     name: 'App',
     components: {
-        AppNavigation
+        AppNavigation,
+        Accueil
     }
 };
 </script>
