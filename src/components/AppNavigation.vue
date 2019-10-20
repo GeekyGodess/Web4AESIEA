@@ -23,7 +23,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Vêtements</v-list-item-title>
+            <v-list-item-title><v-btn text large v-on:click="choise">Vêtements</v-btn></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
@@ -34,7 +34,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Baguettes</v-list-item-title>
+            <v-list-item-title><v-btn text large v-on:click="choise">Baguettes</v-btn></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
@@ -45,7 +45,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Bijoux</v-list-item-title>
+            <v-list-item-title><v-btn text large v-on:click="choise">Bijoux</v-btn></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
@@ -56,7 +56,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Articles du moment</v-list-item-title>
+            <v-list-item-title><v-btn text large v-on:click="choise">Articles du moment</v-btn></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -66,7 +66,7 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Nouveautés</v-list-item-title>
+            <v-list-item-title><v-btn text large v-on:click="choise">Nouveautés</v-btn></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
@@ -76,48 +76,55 @@
             </v-btn>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Coups de coeur</v-list-item-title>
+            <v-list-item-title><v-btn text large v-on:click="choise">Coups de coeur</v-btn></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-footer absolute
-v-bind="localAttrs"
-:padless="padless"
->
-<v-card
-flat
-tile
-width="100%"
-class="grey lighten-1 text-center"
->
-<v-card-text>
-<v-btn
-v-for="icon in icons"
-:key="icon"
-class="mx-4"
-icon
->
-<v-icon size="24px">{{ icon }}</v-icon>
-</v-btn>
-</v-card-text>
-<v-divider></v-divider>
-<v-card-text class="white--text">
-{{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-</v-card-text>
-</v-card>
-</v-footer>
+        v-bind="localAttrs"
+        :padless="padless">
+      <v-card
+        flat
+        tile
+        width="100%"
+        class="grey lighten-1 text-center">
+        <v-card-text>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon"
+            class="mx-4"
+            icon>
+            <v-icon size="24px">{{ icon }}</v-icon>
+          </v-btn>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
   </div>
 </template>
 
 <script>
 export default {
   name: "AppNavigation",
+  props: ['type'],
   data: () => ({
     //
     drawer: null,
     icons: ["mdi-home", "mdi-email", "mdi-facebook-box", "mdi-twitter"]
-  })
+  }),
+  methods: {
+    choise: function (event) {
+      this.name = event.target.textContent;
+      this.type = this.name
+      this.$emit(this.name);
+      this.$emit(event.target.textContent)
+      this.$emit(this.type)
+    }
+  }
 };
 </script>
 
