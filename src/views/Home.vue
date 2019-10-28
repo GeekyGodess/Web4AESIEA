@@ -1,5 +1,5 @@
 <template>
-    <v-container style="background-color:	#FFFFFF;">
+    <v-container style="background-color:	#FEFFFF;">
         <v-layout text-center wrap align-center>
             <v-flex xs12>
                 <v-img :src="require('../assets/logoHarryPotter.jpg')" class="my-3" contain height="200"></v-img>
