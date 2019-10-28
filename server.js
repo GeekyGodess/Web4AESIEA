@@ -13,14 +13,11 @@ const session = require('express-session')
 
 const app = express()
 
-<<<<<<< HEAD
 // ces lignes (cors) sont importantes pour les sessions dans la version de développement
 app.use(cors({
   credentials: true,
   origin: 'http://localhost:8080'
 }))
-=======
->>>>>>> f31a8bf3725adc31dfb2212466e272d9917bef52
 app.use(session({
   secret: 'blablabla', // changez cette valeur
   resave: false,
@@ -29,13 +26,9 @@ app.use(session({
 }))
 app.use(morgan('dev'))
 app.use(bodyParser.json())
-<<<<<<< HEAD
 
 const path = require('path')
 app.use(express.static(path.join(__dirname, '/dist')))
-=======
-app.use(cors())
->>>>>>> f31a8bf3725adc31dfb2212466e272d9917bef52
 
 const users = [{
   username: 'admin',
@@ -59,7 +52,6 @@ app.post('/api/login', (req, res) => {
   console.log('req.body', req.body)
   console.log('req.query', req.query)
   if (!req.session.userId) {
-<<<<<<< HEAD
     const user = users.find(u => u.username === req.body.login && u.password === req.body.password)
     if (!user) {
       // gérez le cas où on n'a pas trouvé d'utilisateur correspondant
@@ -67,11 +59,6 @@ app.post('/api/login', (req, res) => {
       res.json({
         message: 'error'
       })
-=======
-    const user = users.find(u => u.username === req.body.username && u.password === req.body.password)
-    if (!user) {
-      // gérez le cas où on n'a pas trouvé d'utilisateur correspondant
->>>>>>> f31a8bf3725adc31dfb2212466e272d9917bef52
     } else {
       // connect the user
       req.session.userId = 1000 // connect the user, and change the id
@@ -116,8 +103,4 @@ app.get('/api/admin', (req, res) => {
 const port = process.env.PORT || 4000
 app.listen(port, () => {
   console.log(`listening on ${port}`)
-<<<<<<< HEAD
 })
-=======
-})
->>>>>>> f31a8bf3725adc31dfb2212466e272d9917bef52
