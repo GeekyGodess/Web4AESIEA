@@ -1,4 +1,4 @@
-# first-app
+# app_hp
 
 ## Project setup
 ```

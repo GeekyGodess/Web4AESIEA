@@ -10,67 +10,66 @@
             </v-flex>
             <v-flex xs12>
                 <h1 align="left">
-                    <FONT face="impact">Articles du moment</FONT>
+                    <v-icon> mdi-hanger</v-icon>
+                    <FONT face="impact">Vêtements</FONT>
                 </h1>
                 <v-simple-table>
                     <template v-slot:default>
                         <tbody>
                             <tr>
                                 <td>
-                                    <v-img :src="require('../assets/baguetteHermione.jpeg')" class="my-3" contain height="200" width="200"></v-img>
+                                    <v-img :src="require('../assets/teddyGryffondor.jpeg')" class="my-3" contain height="200" width="200"></v-img>
                                 </td>
                                 <td>
                                     <h3>
-                                        Baguette Hermione Granger
+                                        Teddy Gryffondor Quidditch bordeaux
                                     </h3>
-                                    <p>
-                                        Bois: Vigne <br/>
-                                        Coeur: Ventricule de Dragon<br/>
-                                        Longeur: 27,30 centimètres<br/>
+                                    
+                                        Description: Teddy Harry Potter - Gryffindor Blazon Col, poignets et ceinture en tricot à rayures décoratives Manches longues contrastées Poches passepoilées contrastées Boutons-pressions contrastés Sérigraphie recto-verso <br/>
+                                        Matière: 70% coton, 30% polyester <br/>
+                                        Tailles Européennes: S, M, L, XL, XXL<br/>
                                         <b>prix: 40€</b>
                                         <div>
                                          <v-btn rounded color="primary" dark>Ajouter au panier</v-btn>
                                         </div>
-                                    </p>
+                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <v-img :src="require('../assets/baguetteHarry.jpg')" class="my-3" contain height="200" width="200"></v-img>
+                                    <v-img :src="require('../assets/robeSerpentard.jpeg')" class="my-3" contain height="200" width="200"></v-img>
                                 </td>
                                 <td>
                                     <h3>
-                                        Baguette Harry Potter
+                                        Robe de Sorcier Serpentard
                                     </h3>
-                                    <p>
-                                        Bois: Houx<br/>
-                                        Coeur: Plume de phénix<br/>
-                                        Longeur: 27,50 centimètres
-                                        très souple<br/>
-                                        <b>prix: 40€</b>
+                                    
+                                        Description: La pièce de costume indispensable pour tout amateur de la maison Serpentard ou pour un costume de Drago Malefoy ! Unisexe.<br/>
+                                        Matière : 100% polyester, Doublure satin en polyester<br/>
+                                        Tailles Européennes: XS, S, M, L, XL<br/>
+                                         <b>prix: 80€</b>
                                         <div>
                                          <v-btn rounded color="primary" dark>Ajouter au panier</v-btn>
                                         </div>
-                                    </p>
+                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <v-img :src="require('../assets/baguetteRon.jpg')" class="my-3" contain height="200" width="200"></v-img>
+                                    <v-img :src="require('../assets/pullPoufsouffle.jpeg')" class="my-3" contain height="200" width="200"></v-img>
                                 </td>
                                 <td>
                                     <h3>
-                                        Baguette Ronald Weasley
+                                        Pull de Quidditch Poufsouffle
                                     </h3>
-                                    <p>
-                                        Bois: Saule<br/>
-                                        Coeur: Crin de licorne<br/>
-                                        Longeur: 35 centimètres<br/>
-                                        <b>prix: 40€</b>
+                                    
+                                        Matière : 100% laine d'agneau (avec broderie)<br/>
+                                        Tailles Européennes: S, M, L, XL<br/>
+                                        <b>prix: 75€</b>
                                         <div>
                                          <v-btn rounded color="primary" dark>Ajouter au panier</v-btn>
                                         </div>
-                                    </p>
+                                    
                                 </td>
                             </tr>
                         </tbody>
