@@ -11,10 +11,10 @@
       </v-flex>
       <v-flex mb-4>
         <h1 class="display-2 font-weight-bold mb-3" style="color:#000000">
-          <FONT face="Impact">Welcome to Harry Potter shop</FONT>
+          <FONT face="Impact">Bienvenue sur Harry Potter Shop</FONT>
         </h1>
         <p class="subheading font-weight-regular" style="background-color:#FFFFFF;">
-          Connecter vous pour accéder au shop
+          Connectez vous pour accéder au magasin
           <v-container fluid align-center>
             <v-row justify="center">
               <v-col cols="12" sm="6" md="4">
