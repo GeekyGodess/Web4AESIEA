@@ -10,7 +10,7 @@
             <v-btn icon>
                 <img src="../assets/iconPannier.png" style="float:right" height="20%" width="20%" />
             </v-btn>
-            <v-btn icon>
+            <v-btn  to="/login" icon>
         <img src="../assets/iconUser.png" style="float:right" height="20%" width="20%" />
       </v-btn>
         </v-toolbar>
