@@ -13,6 +13,11 @@ const session = require('express-session')
 
 const app = express()
 
+// ces lignes (cors) sont importantes pour les sessions dans la version de développement
+app.use(cors({
+  credentials: true,
+  origin: 'http://localhost:4000'
+}))
 app.use(session({
   secret: 'blablabla', // changez cette valeur
   resave: false,
@@ -21,7 +26,9 @@ app.use(session({
 }))
 app.use(morgan('dev'))
 app.use(bodyParser.json())
-app.use(cors())
+
+const path = require('path')
+app.use(express.static(path.join(__dirname, '/dist')))
 
 const users = [{
   username: 'admin',
@@ -29,7 +36,7 @@ const users = [{
 }]
 
 app.get('/api/test', (req, res) => {
-  console.log('ce console.log est appelé au bon moment')
+  //console.log('ce console.log est appelé au bon moment')
   res.json([
     {
       title: 'truc',
@@ -42,8 +49,8 @@ app.get('/api/test', (req, res) => {
 })
 
 app.post('/api/login', (req, res) => {
-  console.log('req.body', req.body)
-  console.log('req.query', req.query)
+  //console.log('req.body', req.body)
+  //console.log('req.query', req.query)
   if (!req.session.userId) {
     const user = users.find(u => u.username === req.body.login && u.password === req.body.password)
     if (!user) {
@@ -95,5 +102,5 @@ app.get('/api/admin', (req, res) => {
 
 const port = process.env.PORT || 4000
 app.listen(port, () => {
-  console.log(`listening on ${port}`)
-})
+  //console.log(`listening on ${port}`)
+}) 
