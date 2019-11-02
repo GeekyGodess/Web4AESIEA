@@ -1,16 +1,16 @@
 <template>
-    <nav>
+    <nav >
         <v-toolbar flat app>
             <v-app-bar-nav-icon class="grey--text" @click="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title class="text-uppercase grey--text">
-                <span class="font-weight-light"> Harry Potter</span>
-                <span> Shop </span>
+                <span  class="font-weight-light"> Harry Potter</span>
+                <span > Shop </span>
             </v-toolbar-title>  
             <v-spacer></v-spacer>
             <v-btn icon>
                 <img src="../assets/iconPannier.png" style="float:right" height="20%" width="20%" />
             </v-btn>
-            <v-btn icon>
+            <v-btn  to="/login" icon>
         <img src="../assets/iconUser.png" style="float:right" height="20%" width="20%" />
       </v-btn>
         </v-toolbar>
