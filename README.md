@@ -3,6 +3,12 @@
 ## Project setup
 ```
 npm install
+npm install --save express express-session body-parser morgan cors
+npm install -g nodemon # (auto restart the server)
+npm install --save axios vue-axios
+npm run serve
+# in another terminal, in the project folder
+nodemon server.js
 ```
 
 ### Compiles and hot-reloads for development
