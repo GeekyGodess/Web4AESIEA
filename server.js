@@ -36,7 +36,7 @@ const users = [{
 }]
 
 app.get('/api/test', (req, res) => {
-  //console.log('ce console.log est appelé au bon moment')
+  console.log('ce console.log est appelé au bon moment')
   res.json([
     {
       title: 'truc',
@@ -49,8 +49,8 @@ app.get('/api/test', (req, res) => {
 })
 
 app.post('/api/login', (req, res) => {
-  //console.log('req.body', req.body)
-  //console.log('req.query', req.query)
+  console.log('req.body', req.body)
+  console.log('req.query', req.query)
   if (!req.session.userId) {
     const user = users.find(u => u.username === req.body.login && u.password === req.body.password)
     if (!user) {
@@ -102,5 +102,5 @@ app.get('/api/admin', (req, res) => {
 
 const port = process.env.PORT || 4000
 app.listen(port, () => {
-  //console.log(`listening on ${port}`)
-}) 
+  console.log(`listening on ${port}`)
+})
