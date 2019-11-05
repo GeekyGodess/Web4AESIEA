@@ -1,7 +1,5 @@
 # app_hp
 
-essaie commit
-
 ## Project setup
 ```
 npm install
