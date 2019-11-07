@@ -54,6 +54,11 @@ const routes = [
     name: 'team',
     component: () => import( '../views/Team.vue')
   },
+  {
+    path: '/inscription',
+    name: 'inscription',
+    component: () => import( '../views/Inscription.vue')
+  },
 ]
 
 const router = new VueRouter({
