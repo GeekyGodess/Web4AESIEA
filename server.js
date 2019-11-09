@@ -10,7 +10,10 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cors = require('cors')
 const session = require('express-session')
-
+/* const idUser = 0
+const name = ''
+const description = ''
+const prix = '' */
 const app = express()
 
 // ces lignes (cors) sont importantes pour les sessions dans la version de développement
@@ -32,8 +35,15 @@ app.use(express.static(path.join(__dirname, '/dist')))
 
 const users = [{
   username: 'admin',
-  password: 'changethispassword'
+  password: '123'
 }]
+
+/* const panier = [{
+  idUser: this.idUser,
+  name: this.name,
+  description: this.description,
+  prix: this.prix
+}] */
 
 app.get('/api/test', (req, res) => {
   console.log('ce console.log est appelé au bon moment')
@@ -61,7 +71,8 @@ app.post('/api/login', (req, res) => {
       })
     } else {
       // connect the user
-      req.session.userId = 1000 // connect the user, and change the id
+      this.userId = req.session.userId = 1000 // connect the user, and change the id
+      this.panier = []
       res.json({
         message: 'connected'
       })
@@ -71,6 +82,31 @@ app.post('/api/login', (req, res) => {
     res.json({
       message: 'you are already connected'
     })
+  }
+})
+
+app.post('/api/panier', (req, res) => {
+  console.log('req.body', req.body)
+  console.log('req.query', req.query)
+  if (req.body != null) {
+    if (this.userId === 1000) {
+      if (this.panier !== undefined) {
+        this.panier.push(req.body)
+      } else {
+        this.panier = []
+        this.panier.push(req.body)
+      }
+      console.log(this.panier)
+      res.status(200)
+      res.json({
+        message: 'Ajouté! '
+      })
+    } else {
+      res.status(400)
+      res.json({
+        message: 'non connecter! '
+      })
+    }
   }
 })
 
