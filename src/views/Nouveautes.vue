@@ -137,6 +137,7 @@ export default {
       if (event === this.robSep) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Robe de Sorcier Serpentard',
+          image: '../assets/robeSerpentard.jpeg',
           description: 'Description: La pièce de costume indispensable pour tout amateur de la maison Serpentard ou pour un costume de Drago Malefoy ! Unisexe./Matière : 100% polyester, Doublure satin en polyester/Tailles Européennes: XS, S, M, L, XL',
           prix: '80€'
         })
@@ -150,6 +151,7 @@ export default {
       if (event === this.bagHar) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Baguette Harry Potter',
+          image: '../assets/baguetteHarry.jpg',
           description: 'Bois: Houx/Coeur: Plume de phénix/Longeur: 27,50 centimètres très souple',
           prix: '40€'
         })
@@ -162,6 +164,7 @@ export default {
       if (event === this.bijHar) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Collier Vif d’or avec cristaux Swarovski',
+          image: '../assets/bijouxHarry.jpeg',
           description: 'Matière : Argent 925ème avec des cristaux de Swarovski®/Taille : le pendentif mesure environ 1,5cm de haut et 1,5cm de large. Chaîne serpent de 45cm.',
           prix: '75€'
         })

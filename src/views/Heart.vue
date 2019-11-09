@@ -137,6 +137,7 @@ export default {
       if (event === this.bijHer) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Collier Retourneur de temps',
+          image: '../assets/bijouxHermione.jpeg',
           description: 'Matière: plaqué or/Taille: le pendentif mesure environ 3cmx3cm avec une chaîne en maille serpent de 40cm de longueur',
           prix: '20€'
         })
@@ -149,6 +150,7 @@ export default {
       if (event === this.bagHer) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Baguette Hermione Granger',
+          image: '../assets/baguetteHermione.jpeg',
           description: 'Bois: Vigne/Coeur: Ventricule de Dragon/Longeur: 27,30 centimètres',
           prix: '40€'
         })
@@ -161,6 +163,7 @@ export default {
       if (event === this.tedGry) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Teddy Gryffondor Quidditch bordeaux',
+          image: '../assets/teddyGryffondor.jpeg',
           description: 'Description: Teddy Harry Potter - Gryffindor Blazon Col, poignets et ceinture en tricot à rayures décoratives Manches longues contrastées Poches passepoilées contrastées Boutons-pressions contrastés Sérigraphie recto-verso/Matière: 70% coton, 30% polyester/Tailles Européennes: S, M, L, XL, XXL',
           prix: '40€'
         })

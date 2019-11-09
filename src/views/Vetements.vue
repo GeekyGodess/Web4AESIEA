@@ -137,6 +137,7 @@ export default {
       if (event === this.robSep) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Robe de Sorcier Serpentard',
+          image: '../assets/robeSerpentard.jpeg',
           description: 'Description: La pièce de costume indispensable pour tout amateur de la maison Serpentard ou pour un costume de Drago Malefoy ! Unisexe./Matière : 100% polyester, Doublure satin en polyester/Tailles Européennes: XS, S, M, L, XL',
           prix: '80€'
         })
@@ -150,6 +151,7 @@ export default {
       if (event === this.tedGry) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Teddy Gryffondor Quidditch bordeaux',
+          image: '../assets/teddyGryffondor.jpeg',
           description: 'Description: Teddy Harry Potter - Gryffindor Blazon Col, poignets et ceinture en tricot à rayures décoratives Manches longues contrastées Poches passepoilées contrastées Boutons-pressions contrastés Sérigraphie recto-verso/Matière: 70% coton, 30% polyester/Tailles Européennes: S, M, L, XL, XXL',
           prix: '40€'
         })
@@ -162,6 +164,7 @@ export default {
       if (event === this.pullPouf) {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Pull de Quidditch Poufsouffle',
+          image: '../assets/pullPoufsouffle.jpeg',
           description: 'Matière : 100% laine en agneau (avec broderie)/Tailles Européennes: S, M, L, XL',
           prix: '75€'
         })
