@@ -138,8 +138,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Robe de Sorcier Serpentard',
           image: '../assets/robeSerpentard.jpeg',
-          description: 'Description: La pièce de costume indispensable pour tout amateur de la maison Serpentard ou pour un costume de Drago Malefoy ! Unisexe./Matière : 100% polyester, Doublure satin en polyester/Tailles Européennes: XS, S, M, L, XL',
-          prix: '80€'
+          description: 'Description: La pièce de costume indispensable pour tout amateur de la maison Serpentard ou pour un costume de Drago Malefoy ! Unisexe.\nMatière : 100% polyester, Doublure satin en polyester\nTailles Européennes: XS, S, M, L, XL',
+          prix: 'prix: 80€'
         })
         console.log('response is:', response)
         if (response.status === 200) {
@@ -152,8 +152,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Teddy Gryffondor Quidditch bordeaux',
           image: '../assets/teddyGryffondor.jpeg',
-          description: 'Description: Teddy Harry Potter - Gryffindor Blazon Col, poignets et ceinture en tricot à rayures décoratives Manches longues contrastées Poches passepoilées contrastées Boutons-pressions contrastés Sérigraphie recto-verso/Matière: 70% coton, 30% polyester/Tailles Européennes: S, M, L, XL, XXL',
-          prix: '40€'
+          description: 'Description: Teddy Harry Potter - Gryffindor Blazon Col, poignets et ceinture en tricot à rayures décoratives Manches longues contrastées Poches passepoilées contrastées Boutons-pressions contrastés Sérigraphie recto-verso\nMatière: 70% coton, 30% polyester\nTailles Européennes: S, M, L, XL, XXL',
+          prix: 'prix: 40€'
         })
         if (response.status === 200) {
           console.log('response is:', response)
@@ -165,8 +165,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Pull de Quidditch Poufsouffle',
           image: '../assets/pullPoufsouffle.jpeg',
-          description: 'Matière : 100% laine en agneau (avec broderie)/Tailles Européennes: S, M, L, XL',
-          prix: '75€'
+          description: 'Matière : 100% laine en agneau (avec broderie)\nTailles Européennes: S, M, L, XL',
+          prix: 'prix: 75€'
         })
         if (response.status === 200) {
           console.log('response is:', response)

@@ -58,6 +58,11 @@ const routes = [
     path: '/inscription',
     name: 'inscription',
     component: () => import('../views/Inscription.vue')
+  },
+  {
+    path: '/panier',
+    name: 'panier',
+    component: () => import('../views/Panier.vue')
   }
 ]
 

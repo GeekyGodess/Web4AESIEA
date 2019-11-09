@@ -36,15 +36,7 @@ const users = [{
 
 app.get('/api/test', (req, res) => {
   console.log('ce console.log est appelé au bon moment')
-  res.json([
-    {
-      title: 'truc',
-      content: 'machin'
-    }, {
-      title: 'truc2',
-      content: 'machin2'
-    }
-  ])
+  res.json(this.panier)
 })
 
 app.post('/api/login', (req, res) => {

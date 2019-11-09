@@ -136,8 +136,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Collier Retourneur de temps',
           image: '../assets/bijouxHermione.jpeg',
-          description: 'Matière: plaqué or/Taille: le pendentif mesure environ 3cmx3cm avec une chaîne en maille serpent de 40cm de longueur',
-          prix: '20€'
+          description: 'Matière: plaqué or\nTaille: le pendentif mesure environ 3cmx3cm avec une chaîne en maille serpent de 40cm de longueur',
+          prix: 'prix: 20€'
         })
         if (response.status === 200) {
           console.log('response is:', response)
@@ -149,8 +149,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Collier Vif d’or avec cristaux Swarovski',
           image: '../assets/bijouxHarry.jpeg',
-          description: 'Matière : Argent 925ème avec des cristaux de Swarovski®/Taille : le pendentif mesure environ 1,5cm de haut et 1,5cm de large. Chaîne serpent de 45cm.',
-          prix: '75€'
+          description: 'Matière : Argent 925ème avec des cristaux de Swarovski®\nTaille : le pendentif mesure environ 1,5cm de haut et 1,5cm de large. Chaîne serpent de 45cm.',
+          prix: 'prix: 75€'
         })
         if (response.status === 200) {
           console.log('response is:', response)
@@ -162,8 +162,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Collier Reliques de la mort avec cristaux de Swarovski',
           image: '../assets/bijouxRelique.jpeg',
-          description: 'Matière : Argent 925ème avec des cristaux Swarovski®/Taille : le pendentif mesure environ 1,5cm de haut et 1,5cm de large. Chaîne serpent de 45cm.',
-          prix: '75€'
+          description: 'Matière : Argent 925ème avec des cristaux Swarovski®\nTaille : le pendentif mesure environ 1,5cm de haut et 1,5cm de large. Chaîne serpent de 45cm.',
+          prix: 'prix: 75€'
         })
         if (response.status === 200) {
           console.log('response is:', response)

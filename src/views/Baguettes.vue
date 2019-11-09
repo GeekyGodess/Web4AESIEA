@@ -139,8 +139,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Baguette Hermione Granger',
           image: '../assets/baguetteHermione.jpeg',
-          description: 'Bois: Vigne/Coeur: Ventricule de Dragon/Longeur: 27,30 centimètres',
-          prix: '40€'
+          description: 'Bois: Vigne\nCoeur: Ventricule de Dragon\nLongeur: 27,30 centimètres',
+          prix: 'prix: 40€'
         })
         console.log('response is:', response)
         if (response.status === 200) {
@@ -153,8 +153,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Baguette Harry Potter',
           image: '../assets/baguetteHarry.jpg',
-          description: 'Bois: Houx/Coeur: Plume de phénix/Longeur: 27,50 centimètres très souple',
-          prix: '40€'
+          description: 'Bois: Houx\nCoeur: Plume de phénix\nLongeur: 27,50 centimètres très souple',
+          prix: 'prix: 40€'
         })
         if (response.status === 200) {
           console.log('response is:', response)
@@ -166,8 +166,8 @@ export default {
         const response = await this.axios.post(this.url + '/api/panier', {
           name: 'Baguette Ronald Weasley',
           image: '../assets/baguetteRon.jpg',
-          description: 'Bois: Saule/Coeur: Crin de licorne/Longeur: 35 centimètres',
-          prix: '40€'
+          description: 'Bois: Saule\nCoeur: Crin de licorne\nLongeur: 35 centimètres',
+          prix: 'prix: 40€'
         })
         if (response.status === 200) {
           console.log('response is:', response)

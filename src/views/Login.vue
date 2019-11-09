@@ -35,7 +35,7 @@
             </v-snackbar>
           </v-container>
           <!-- faire une redirection vers la page inscription.vue -->
-          <a href="https://community.vuetifyjs.com" target="_blank">Pas encore inscris? inscrivez-vous!</a>
+          <a href="/inscription" target="_blank">Pas encore inscris? inscrivez-vous!</a>
         </p>
       </v-flex>
     </v-layout>
