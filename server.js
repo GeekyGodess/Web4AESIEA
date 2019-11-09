@@ -10,10 +10,6 @@ const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cors = require('cors')
 const session = require('express-session')
-/* const idUser = 0
-const name = ''
-const description = ''
-const prix = '' */
 const app = express()
 
 // ces lignes (cors) sont importantes pour les sessions dans la version de développement
@@ -37,13 +33,6 @@ const users = [{
   username: 'admin',
   password: '123'
 }]
-
-/* const panier = [{
-  idUser: this.idUser,
-  name: this.name,
-  description: this.description,
-  prix: this.prix
-}] */
 
 app.get('/api/test', (req, res) => {
   console.log('ce console.log est appelé au bon moment')
@@ -85,6 +74,18 @@ app.post('/api/login', (req, res) => {
   }
 })
 
+// lorsque on redemarre le serveur la "base de donnée sera remise a 0 seul l'utilisateur admin est existant au demarrage"
+app.post('/api/inscription', (req, res) => {
+  console.log('req.body', req.body)
+  console.log('req.query', req.query)
+  users.push({ username: req.body.login, password: req.body.password })
+  console.log(users)
+  res.status(200)
+  res.json({
+    message: 'inscris'
+  })
+})
+
 app.post('/api/panier', (req, res) => {
   console.log('req.body', req.body)
   console.log('req.query', req.query)
@@ -122,18 +123,6 @@ app.get('/api/logout', (req, res) => {
       message: 'you are now disconnected'
     })
   }
-})
-
-app.get('/api/admin', (req, res) => {
-  if (!req.session.userId || req.session.isAdmin === false) {
-    res.status(401)
-    res.json({ message: 'Unauthorized' })
-    return
-  }
-
-  res.json({
-    message: 'congrats, you are connected'
-  })
 })
 
 const port = process.env.PORT || 4000

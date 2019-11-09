@@ -34,6 +34,7 @@
               </v-btn>
             </v-snackbar>
           </v-container>
+          <!-- faire une redirection vers la page inscription.vue -->
           <a href="https://community.vuetifyjs.com" target="_blank">Pas encore inscris? inscrivez-vous!</a>
         </p>
       </v-flex>
@@ -68,21 +69,10 @@ export default {
         this.text = response.data.message
         this.login2 = ''
         this.mdp = ''
+        // faire une redirection vers la page home
       }
     },
     logout () {
-    },
-    addElement () {
-      this.todos.push({
-        id: this.todos.length,
-        name: this.name,
-        description: this.description
-      })
-      console.log('ajouté !')
-    },
-    rmElement (index) {
-      console.log('index', index)
-      this.todos.splice(index, 1)
     }
   }
 }

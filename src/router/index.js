@@ -22,43 +22,43 @@ const routes = [
   {
     path: '/baguettes',
     name: 'baguettes',
-    component: () => import( '../views/Baguettes.vue')
+    component: () => import('../views/Baguettes.vue')
   },
   {
     path: '/bijoux',
     name: 'bijoux',
-    component: () => import( '../views/Bijoux.vue')
+    component: () => import('../views/Bijoux.vue')
   },
   {
     path: '/heart',
     name: 'heart',
-    component: () => import( '../views/Heart.vue')
+    component: () => import('../views/Heart.vue')
   },
   {
     path: '/vetements',
     name: 'vetements',
-    component: () => import( '../views/Vetements.vue')
+    component: () => import('../views/Vetements.vue')
   },
   {
     path: '/new',
     name: 'new',
-    component: () => import( '../views/Nouveautes.vue')
+    component: () => import('../views/Nouveautes.vue')
   },
   {
     path: '/login',
     name: 'login',
-    component: () => import( '../views/Login.vue')
+    component: () => import('../views/Login.vue')
   },
   {
     path: '/team',
     name: 'team',
-    component: () => import( '../views/Team.vue')
+    component: () => import('../views/Team.vue')
   },
   {
     path: '/inscription',
     name: 'inscription',
-    component: () => import( '../views/Inscription.vue')
-  },
+    component: () => import('../views/Inscription.vue')
+  }
 ]
 
 const router = new VueRouter({
