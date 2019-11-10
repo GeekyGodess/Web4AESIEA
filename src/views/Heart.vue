@@ -142,7 +142,6 @@ export default {
           prix: 'prix: 20€'
         })
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }
@@ -155,7 +154,6 @@ export default {
           prix: 'prix: 40€'
         })
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }
@@ -168,7 +166,6 @@ export default {
           prix: 'prix: 40€'
         })
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }

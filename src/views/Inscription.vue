@@ -55,15 +55,12 @@ export default {
   }),
   methods: {
     async inscription () {
-      // connecter l'utilisateur
-      console.log('login: ', this.login2)
-      console.log('mot de passe: ', this.mdp)
+      // inscription l'utilisateur
       const response = await this.axios.post(this.url + '/api/inscription', {
         login: this.login2,
         password: this.mdp
       })
       if (response.status === 200) {
-        console.log('response is:', response)
         this.snackbar = true
         this.text = response.data.message
         this.login2 = ''

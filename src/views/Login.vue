@@ -34,7 +34,6 @@
               </v-btn>
             </v-snackbar>
           </v-container>
-          <!-- faire une redirection vers la page inscription.vue -->
           <v-btn to="/inscription" text small color="primary"><u>Pas encore inscris? inscrivez-vous!</u></v-btn>
         </p>
       </v-flex>
@@ -57,20 +56,16 @@ export default {
   methods: {
     async login () {
       // connecter l'utilisateur
-      console.log('login: ', this.login2)
-      console.log('mot de passe: ', this.mdp)
       const response = await this.axios.post(this.url + '/api/login', {
         login: this.login2,
         password: this.mdp
       })
       if (response.status === 200) {
-        console.log('response is:', response)
         this.snackbar = true
         this.text = response.data.message
         this.login2 = ''
         this.mdp = ''
         this.$router.push('home')
-        // faire une redirection vers la page home
       }
     },
     logout () {

@@ -142,9 +142,7 @@ export default {
           description: 'Bois: Vigne\nCoeur: Ventricule de Dragon\nLongeur: 27,30 centimètres',
           prix: 'prix: 40€'
         })
-        console.log('response is:', response)
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }
@@ -157,7 +155,6 @@ export default {
           prix: 'prix: 40€'
         })
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }
@@ -170,7 +167,6 @@ export default {
           prix: 'prix: 40€'
         })
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }

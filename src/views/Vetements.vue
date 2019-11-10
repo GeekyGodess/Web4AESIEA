@@ -141,9 +141,7 @@ export default {
           description: 'Description: La pièce de costume indispensable pour tout amateur de la maison Serpentard ou pour un costume de Drago Malefoy ! Unisexe.\nMatière : 100% polyester, Doublure satin en polyester\nTailles Européennes: XS, S, M, L, XL',
           prix: 'prix: 80€'
         })
-        console.log('response is:', response)
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }
@@ -156,7 +154,6 @@ export default {
           prix: 'prix: 40€'
         })
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }
@@ -169,7 +166,6 @@ export default {
           prix: 'prix: 75€'
         })
         if (response.status === 200) {
-          console.log('response is:', response)
           this.snackbar = true
           this.text = response.data.message
         }
