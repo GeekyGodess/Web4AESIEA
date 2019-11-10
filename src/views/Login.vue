@@ -35,7 +35,7 @@
             </v-snackbar>
           </v-container>
           <!-- faire une redirection vers la page inscription.vue -->
-          <a href="/inscription" target="_blank">Pas encore inscris? inscrivez-vous!</a>
+          <v-btn to="/inscription" text small color="primary"><u>Pas encore inscris? inscrivez-vous!</u></v-btn>
         </p>
       </v-flex>
     </v-layout>
@@ -69,6 +69,7 @@ export default {
         this.text = response.data.message
         this.login2 = ''
         this.mdp = ''
+        this.$router.push('home')
         // faire une redirection vers la page home
       }
     },

@@ -37,7 +37,7 @@ export default {
     return {
       drawer: false,
       links: [
-        { icon: 'mdi-home-variant', text: 'Accueil', route: '/' },
+        { icon: 'mdi-home-variant', text: 'Accueil', route: '/home' },
         { icon: 'mdi-hanger', text: 'Vêtements', route: '/vetements' },
         { icon: 'mdi-auto-fix', text: 'Baguettes', route: '/baguettes' },
         { icon: 'mdi-watch', text: 'Bijoux', route: '/bijoux' },
