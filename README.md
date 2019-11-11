@@ -20,7 +20,7 @@ nodemon server.js
 npm run build
 ```
 Adresse du site:
-https://geekygodess-web4aesiea-3.glitch.me/(https://geekygodess-web4aesiea-3.glitch.me/)
+https://geekygodess-web4aesiea-3.glitch.me/
 
 ### Run your tests
 ```
