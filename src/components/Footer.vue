@@ -1,5 +1,5 @@
 <template>
-    <v-footer 
+    <v-footer
         v-bind="localAttrs"
         :padless="padless">
       <v-card
@@ -11,11 +11,9 @@
           <v-btn small fab depressed>
               <v-icon size="24px" >mdi-twitter</v-icon>
             </v-btn>
-            
             <v-btn small fab depressed>
               <v-icon size="24px">mdi-facebook</v-icon>
             </v-btn>
-
             <v-btn small fab depressed>
               <v-icon size="24px">mdi-linkedin</v-icon>
             </v-btn>

@@ -122,7 +122,7 @@
 export default {
   data: () => ({
     valid: false,
-    url: 'http://localhost:4000',
+    url: '', // 'http://localhost:4000'
     bagHer: 'Hermione',
     bijHer: 'Hermione2',
     tedGry: 'Gryfondor',

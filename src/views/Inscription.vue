@@ -49,7 +49,7 @@ export default {
     login2: '',
     mdp: '',
     todos: [],
-    url: 'http://localhost:4000',
+    url: '', // 'http://localhost:4000'
     snackbar: false,
     text: ''
   }),
