@@ -35,9 +35,14 @@ const users = [{
 }]
 
 app.get('/api/test', (req, res) => {
-  console.log('ce console.log est appelé au bon moment')
+  console.log(this.panier)
   res.json(this.panier)
 })
+
+app.get('/api/user', (req, res) => {
+  res.json(this.userId)
+})
+
 
 app.post('/api/login', (req, res) => {
   console.log('req.body', req.body)
@@ -104,12 +109,13 @@ app.post('/api/panier', (req, res) => {
 })
 
 app.get('/api/logout', (req, res) => {
-  if (!req.session.userId) {
+  if (this.userId === 0) {
     res.status(401)
     res.json({
       message: 'you are already disconnected'
     })
   } else {
+    this.userId = 0
     req.session.userId = 0
     res.json({
       message: 'you are now disconnected'

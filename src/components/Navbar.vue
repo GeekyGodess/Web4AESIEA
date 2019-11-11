@@ -10,7 +10,7 @@
       <v-btn to="/panier" icon>
         <img src="../assets/iconPannier.png" style="float:right" height="20%" width="20%" />
       </v-btn>
-      <v-btn  to="/login" icon>
+      <v-btn @click="logout" icon>
         <img src="../assets/iconUser.png" style="float:right" height="20%" width="20%" />
       </v-btn>
     </v-toolbar>
@@ -28,6 +28,16 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <v-snackbar v-model="snackbar">
+      {{ text }}
+      <v-btn
+        color="pink"
+        text
+        @click="snackbar = false"
+      >
+        Close
+      </v-btn>
+    </v-snackbar>
   </nav>
 </template>
 
@@ -35,6 +45,9 @@
 export default {
   data () {
     return {
+      url: 'http://localhost:4000',
+      snackbar: false,
+      text: '',
       drawer: false,
       links: [
         { icon: 'mdi-home-variant', text: 'Accueil', route: '/home' },
@@ -45,6 +58,22 @@ export default {
         { icon: 'mdi-heart', text: 'Coups de coeur', route: '/heart' },
         { icon: 'mdi-account-group-outline', text: 'Team', route: '/team' }
       ]
+    }
+  },
+  methods: {
+    async logout () {
+      const response = await this.axios.get(this.url + '/api/user')
+      if (response.data === 1000) {
+        const response2 = await this.axios.get(this.url + '/api/logout')
+        if (response2.status === 200) {
+          this.snackbar = true
+          console.log(response2)
+          this.text = response2.data.message
+          this.$router.push('/')
+        }
+      } else {
+        this.$router.push('/')
+      }
     }
   }
 }
