@@ -15,7 +15,7 @@ const app = express()
 // ces lignes (cors) sont importantes pour les sessions dans la version de développement
 app.use(cors({
   credentials: true,
-  origin: 'http://localhost:4000'
+  origin: 'http://localhost:8080'
 }))
 app.use(session({
   secret: 'tpweb', // changez cette valeur
@@ -26,6 +26,7 @@ app.use(session({
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 
+// prod
 const path = require('path')
 app.use(express.static(path.join(__dirname, '/dist')))
 

@@ -45,7 +45,7 @@
 export default {
   data () {
     return {
-      url: 'http://localhost:4000',
+      url: '', // 'http://localhost:4000'
       snackbar: false,
       text: '',
       drawer: false,
@@ -67,7 +67,6 @@ export default {
         const response2 = await this.axios.get(this.url + '/api/logout')
         if (response2.status === 200) {
           this.snackbar = true
-          console.log(response2)
           this.text = response2.data.message
           this.$router.push('/')
         }
