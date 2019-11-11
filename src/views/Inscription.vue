@@ -65,6 +65,7 @@ export default {
         this.text = response.data.message
         this.login2 = ''
         this.mdp = ''
+        this.$router.push('/')
       }
     }
   }
