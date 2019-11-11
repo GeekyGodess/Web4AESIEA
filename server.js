@@ -18,7 +18,7 @@ app.use(cors({
   origin: 'http://localhost:4000'
 }))
 app.use(session({
-  secret: 'blablabla', // changez cette valeur
+  secret: 'tpweb', // changez cette valeur
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false } // ne changez que si vous avez activé le https
@@ -34,7 +34,7 @@ const users = [{
   password: '123'
 }]
 
-app.get('/api/test', (req, res) => {
+app.get('/api/listPanier', (req, res) => {
   console.log(this.panier)
   res.json(this.panier)
 })
@@ -42,7 +42,6 @@ app.get('/api/test', (req, res) => {
 app.get('/api/user', (req, res) => {
   res.json(this.userId)
 })
-
 
 app.post('/api/login', (req, res) => {
   console.log('req.body', req.body)

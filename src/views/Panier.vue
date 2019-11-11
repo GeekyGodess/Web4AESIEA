@@ -17,6 +17,7 @@
             :items="items"
             :items-per-page.sync="itemsPerPage"
             :footer-props="{ itemsPerPageOptions }"
+            v-if="a === 2"
           >
           <template v-slot:default="props">
             <v-row
@@ -33,13 +34,8 @@
                   <v-divider></v-divider>
                     <v-list dense>
                       <v-list-item>
-                        <v-list-item-content>
-                          <!-- je n'arrive pas a afficher l'image de la liste -->
-                          <v-img :src="require('../assets/baguetteHarry.jpg')" class="my-3" contain height="200" width="200"></v-img>
-                        </v-list-item-content>
                         <v-list-item-content class="align-end">
                           <center>
-                            <!-- problème de retour a la ligne -->
                             {{ item.description }}
                           </center>
                           <b>{{ item.prix }}</b>
@@ -51,6 +47,7 @@
               </v-row>
             </template>
           </v-data-iterator>
+          <h3 v-if="a === 1">Le panier est vide!</h3>
           <v-snackbar v-model="snackbar">
             {{ text }}
             <v-btn
@@ -76,13 +73,18 @@ export default {
     itemsPerPageOptions: [4, 8, 12],
     itemsPerPage: 4,
     items: [],
-    snackbar: false
+    snackbar: false,
+    a: 0
   }),
   methods: {
     async listElement (event) {
-      const response = await this.axios.get(this.url + '/api/test')
+      const response = await this.axios.get(this.url + '/api/listPanier')
       this.items = response.data
-      console.log('response is:', response.data)
+      if (this.items === '') {
+        this.a = 1
+      } else {
+        this.a = 2
+      }
     }
   }
 }
